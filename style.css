@@ -1,0 +1,472 @@
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Playfair+Display&family=Ubuntu:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Playfair Display", serif;
+  background-color: #e0e0e0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+#header {
+  background-image: url("images/lady4.png");
+  background-color: #cfb7a1;
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.navbar {
+  background: transparent;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar a {
+  color: #fff;
+}
+.navbar i {
+  font-size: 1.5rem;
+}
+
+.left-nav {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logo {
+  padding-right: 50px;
+  font-weight: bolder;
+}
+#logo {
+  font-size: 2rem;
+}
+.right-nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+.right-nav form {
+  height: 100%;
+  width: 20vw;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  animation: visible 1s linear;
+}
+.right-nav form i {
+  font-size: 1rem;
+}
+
+@keyframes visible {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 20vw;
+  }
+}
+
+.right-nav form input {
+  width: 100%;
+  height: 50%;
+  outline: none;
+  border: none;
+  padding: 0 20px;
+  color: #5a060b;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.right-nav form button {
+  height: 50%;
+  width: 50px;
+  border: none;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.right-nav form button i {
+  color: #5a060b;
+}
+.search {
+  margin: 0 20px;
+}
+#cart-no {
+  font-size: 1.2rem;
+  font-family: "ubuntu";
+  font-weight: 600;
+}
+.main {
+  width: 50%;
+  height: 30%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.main h1 {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  color: #fff;
+}
+.main p {
+  color: #fff;
+  letter-spacing: 6px;
+  font-family: "Ubuntu", sans-serif;
+}
+.main a {
+  margin-top: 50px;
+  height: 40px;
+  width: 100px;
+  background-color: #a0715d;
+  background-color: #5a060b;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 4px 4px gray);
+  transition: transform 0.3s ease;
+}
+.main a:hover {
+  transform: translateY(-5px);
+}
+#products {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-box {
+  width: 80%;
+  height: 100%;
+  transform: translateY(-50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ededed;
+}
+.product-box h1 {
+  color: #5a060b;
+  font-size: 2rem;
+  margin-top: 40px;
+}
+#products hr {
+  width: 100px;
+  height: 2px;
+  margin: 10px;
+  border: none;
+  border-radius: 25px;
+  background-color: #5a060b;
+}
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-top: 50px;
+}
+.grid a {
+  color: #000;
+}
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.grid-item:hover {
+  background-color: #fff;
+}
+
+.grid-item img {
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.grid-item p {
+  font-family: "ubuntu";
+  font-size: 12px;
+  width: 80%;
+}
+.grid-item span {
+  font-size: 20px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.grid-item h3 {
+  margin: auto;
+}
+.grid-item i {
+  position: absolute;
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: #adadad;
+}
+.grid-item:hover i {
+  opacity: 1;
+}
+
+.middle {
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+}
+.four,
+.five,
+.six {
+  border-top: 1px solid #cccccc;
+}
+
+.view-cart {
+  margin-top: 10px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.grid-item:hover .view-cart {
+  opacity: 1;
+}
+
+.view-cart button {
+  width: 50%;
+  height: 100%;
+  border: none;
+  border-top: 1px solid #cccccc;
+  background-color: #fff;
+}
+#cart-btn {
+  background-color: #5a060b;
+  color: #fff;
+}
+
+#footer {
+  height: 100vh;
+  background-image: url(https://img.freepik.com/free-photo/glasses-with-slightly-rounded-frame_23-2150670763.jpg?w=826&t=st=1695536551~exp=1695537151~hmac=3306ec64334d0f50e14e25e9de986263ad80e4663316322cd0f709c9e1657b4c);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.upper {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: brightness(0.8);
+  padding: 40px 0;
+}
+.upper h2 {
+  margin: 20px 0;
+  color: #a0715d;
+}
+.upper p {
+  color: #222222;
+}
+.upper form {
+  height: 50px;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  background: rgba(255, 255, 255, 0.4);
+}
+.upper form input {
+  height: 100%;
+  width: 75%;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+  font-size: 18px;
+  background: transparent;
+  color: #222222;
+}
+.upper form button {
+  height: 100%;
+  width: 20%;
+  border: none;
+  color: #fff;
+  background-color: #5a060b;
+}
+
+.lower {
+  background-color: #222222;
+  width: 100%;
+  display: flex;
+  padding: 20px 0;
+}
+.category,
+.about {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20vw;
+  margin-top: 20px;
+}
+
+.category li {
+  list-style: none;
+  margin: 5px 0;
+}
+li a {
+  color: #adadad;
+  font-weight: lighter;
+}
+.lower hr {
+  height: 200px;
+  width: 0;
+  margin-top: 50px;
+  background-color: #adadad;
+  border: none;
+  width: 1px;
+}
+.lower h3 {
+  font-size: 15px;
+  font-weight: 100;
+  font-family: "ubuntu", sans-serif;
+  margin-bottom: 20px;
+}
+
+.lower h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #adadad;
+}
+.lower p {
+  font-size: 12px;
+  width: 90%;
+  font-weight: 100;
+  color: #adadad;
+}
+.icon-box {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.icon-box i {
+  font-size: 25px;
+  color: #adadad;
+  transition: color 0.3s ease;
+}
+.icon-box i:hover {
+  color: #5a060b;
+}
+
+@media screen and (max-width: 990px) {
+  .left-nav {
+    width: 60%;
+  }
+  .right-nav i {
+    font-size: 1rem;
+  }
+  #logo {
+    font-size: 1.2rem;
+  }
+  .logo {
+    padding-right: 20px;
+  }
+  .main h1 {
+    font-size: 2rem;
+  }
+  .main p {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .three {
+    border-top: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+  }
+  .upper form button {
+    width: 60px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header {
+    background-image: url(images/redlady2.png);
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .left-nav {
+    width: 50%;
+  }
+  .grid-item {
+    border: none;
+  }
+  .one,
+  .two,
+  .three,
+  .four,
+  .five {
+    border-bottom: 1px solid #cccccc;
+  }
+}
+@media screen and (max-width: 480px) {
+  .left-nav {
+    width: 30%;
+    justify-content: flex-start;
+  }
+  .logo {
+    padding-left: 20px;
+  }
+  .men,
+  .women,
+  .kids,
+  .gifts {
+    display: none;
+  }
+  .right-nav {
+    width: 70%;
+    padding: 10px;
+  }
+  .right-nav form {
+    width: 40vw;
+    margin: 0 10px;
+  }
+}
